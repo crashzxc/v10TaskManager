@@ -1,16 +1,30 @@
 {
-	"name": "NodejsStarterApp",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"express": "4.13.x",
-		"cfenv": "1.0.x"
-	},
-	"repository": {},
-	"engines": {
-		"node": "4.x"
-	} 
+  "name": "NodejsStarterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async-waterfall": "^0.1.5",
+    "body-parser": "^1.16.1",
+    "cookie-parser": "^1.4.3",
+    "cron": "^1.2.1",
+    "dateformat": "^2.0.0",
+    "debug": "^2.6.1",
+    "express": "^4.14.1",
+    "fcm-push": "^1.1.2",
+    "firebase": "^3.7.0",
+    "hashmap": "^2.0.6",
+    "method-override": "^2.3.7",
+    "moment": "^2.17.1",
+    "morgan": "^1.7.0",
+    "promise": "^7.1.1",
+    "pug": "~2.0.0-beta10",
+    "serve-favicon": "^2.3.2"
+  },
+  "repository": {},
+  "engines": {
+    "node": "4.x"
+  }
 }
