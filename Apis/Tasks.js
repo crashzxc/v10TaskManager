@@ -89,6 +89,27 @@ fbFnc.api = {
             });
             resolve(hmap);
         });
+    },
+    updateOneTask:function(inTask,inKey){
+        return new Promise((resolve,reject)=>{
+            var taskRef = db.ref('/tasks').child(inKey).set(inTask);
+            resolve('Updated Project');
+        });
+    },
+    deleteOneTask:function (inKey) {
+        return new Promise((resolve, reject) => {
+            var taskRef = db.ref('/tasks/' + inKey);
+            taskRef.once('value').then(function (snapshot) {
+                snapshot.ref.remove(function (error) {
+                    if (!error) {
+                        resolve('Removed task');
+                    }
+                    else {
+                        reject('Failed to remove task');
+                    }
+                });
+            });
+        });
     }
 }
 function priorityData(inPriorityName,inPriorityKey) {
